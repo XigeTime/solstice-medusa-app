@@ -12,7 +12,7 @@ module.exports = defineConfig({
         ? {
           connection: {
             ssl: {
-              rejectUnauthorized: true
+              rejectUnauthorized: false,
             },
           }
         } : {},
