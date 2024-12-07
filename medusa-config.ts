@@ -14,6 +14,9 @@ module.exports = defineConfig({
             ssl: {
               rejectUnauthorized: false,
             },
+            tls: {
+              rejectUnauthorized: false,
+            }
           }
         } : {},
     http: {
