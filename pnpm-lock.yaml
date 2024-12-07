@@ -44,6 +44,9 @@ importers:
       event-bus-redis:
         specifier: link:@medusajs/medusa/event-bus-redis
         version: link:@medusajs/medusa/event-bus-redis
+      payment:
+        specifier: link:@medusajs/medusa/payment
+        version: link:@medusajs/medusa/payment
       pg:
         specifier: ^8.13.0
         version: 8.13.1

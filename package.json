@@ -35,6 +35,7 @@
     "awilix": "^8.0.1",
     "cache-redis": "link:@medusajs/medusa/cache-redis",
     "event-bus-redis": "link:@medusajs/medusa/event-bus-redis",
+    "payment": "link:@medusajs/medusa/payment",
     "pg": "^8.13.0",
     "workflow-engine-redis": "link:@medusajs/medusa/workflow-engine-redis"
   },
