@@ -8,17 +8,6 @@ module.exports = defineConfig({
     databaseUrl: process.env.DATABASE_URL,
     redisUrl: process.env.REDIS_URL + '?sslmode=require',
     backendUrl: process.env.MEDUSA_BACKEND_URL,
-    databaseDriverOptions: process.env.NODE_ENV !== "development"
-        ? {
-          connection: {
-            ssl: {
-              rejectUnauthorized: false,
-            },
-            tls: {
-              rejectUnauthorized: false,
-            }
-          }
-        } : {},
     http: {
       storeCors: process.env.STORE_CORS!,
       adminCors: process.env.ADMIN_CORS!,
