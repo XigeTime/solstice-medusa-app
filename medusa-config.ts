@@ -2,11 +2,13 @@ import { loadEnv, defineConfig } from '@medusajs/framework/utils'
 
 loadEnv(process.env.NODE_ENV || 'development', process.cwd());
 
+
+
 module.exports = defineConfig({
   projectConfig: {
     workerMode: process.env.MEDUSA_WORKER_MODE as "shared" | "worker" | "server",
     databaseUrl: process.env.DATABASE_URL,
-    redisUrl: process.env.REDIS_URL + '?sslmode=require',
+    redisUrl: process.env.REDIS_URL,
     backendUrl: process.env.MEDUSA_BACKEND_URL,
     http: {
       storeCors: process.env.STORE_CORS!,
@@ -20,6 +22,20 @@ module.exports = defineConfig({
     },
   },
   modules: [
+    // {
+    //   resolve: "@medusajs/medusa/payment",
+    //   options: {
+    //     providers: [
+    //       {
+    //         resolve: "./src/modules/revolut",
+    //         id: "revolut",
+    //         options: {
+    //           apiKey: process.env.REVOLUT_SECRET_KEY
+    //         }
+    //       }
+    //     ]
+    //   }
+    // },
     {
       resolve: "@medusajs/medusa/cache-redis",
       options: {
